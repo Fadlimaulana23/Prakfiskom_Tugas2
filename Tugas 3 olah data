@@ -1,0 +1,36 @@
+import pandas as pd
+
+# Creating a DataFrame with first and last names
+last_names = ['Connor', 'Connor', 'Reese']
+first_names = ['Sarah', 'John', 'Kyle']
+df = pd.DataFrame({
+    'first_name': first_names,
+    'last_name': last_names,
+})
+
+# Loading a dataset from an Excel file using the provided URL
+url = "https://github.com/luminati-io/Instagram-dataset-samples/raw/main/Instagram%20Profiles%20-%20Github%20Hashtag.xlsx"
+database = pd.read_excel(url)
+
+# Printing information about the loaded dataset
+print(database.columns)  # Display column names
+print(database.describe())  # Display summary statistics
+print(database.head())  # Display the first few rows of the dataset
+print(database.tail())  # Display the last few rows of the dataset
+
+import numpy as np
+
+# Creating another DataFrame with numerical data
+Data1 = [i for i in range(10, 20)]  # Change the values of 'x'
+Data2 = np.cos(new_x)  # Calculate the cosine values for the new 'x'
+
+print(Data1,Data2)
+
+dataframe = pd.DataFrame({
+    'Data1': Data1,
+    'Data2': Data2
+})
+dataframe['ResultData'] = np.sin(new_x)  # Adding a new column 'new_z' with sine values of 'new_x'
+
+dataframe
+
